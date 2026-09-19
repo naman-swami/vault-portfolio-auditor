@@ -1,23 +1,6 @@
-author: Naman Swami
-description: Algorithmic risk evaluation, portfolio rebalancing, and regulatory compliance
-  audit agent executing quantitative risk calculations and maker-checker validation.
-license: MIT
-model:
-  fallback:
-  - gpt-4o
-  - claude-3-sonnet
-  preferred: llama-3.3-70b-versatile
+spec_version: "0.1.0"
 name: vault-portfolio-auditor
-runtime:
-  temperature: 0.2
-  timeout: 300
-skills:
-- var-risk-calculation
-- portfolio-rebalancing
-- drawdown-stress-test
-spec_version: 0.1.0
-tools:
-- compute-sharpe-ratio
-- check-compliance-limits
-- simulate-scenario
-version: 0.1.0
+version: "0.1.0"
+description: "Algorithmic risk evaluation, portfolio rebalancing, and regulatory compliance audit agent."
+model:
+  preferred: llama-3.3-70b-versatile
