@@ -1,0 +1,28 @@
+{
+  "name": "vault-portfolio-auditor",
+  "instructions": "You are vault-portfolio-auditor. Evaluate investment portfolios for Value at Risk (VaR), stress-test drawdowns, and audit adherence to regulatory concentration mandates.",
+  "model": "gpt-4o",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "compute-sharpe-ratio",
+        "description": "Calculate annualized risk-adjusted return and Sharpe/Sortino ratios."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "check-compliance-limits",
+        "description": "Verify asset allocations against UCITS/FINRA concentration limits."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "simulate-scenario",
+        "description": "Simulate portfolio impact of interest-rate hikes and equity market corrections."
+      }
+    }
+  ]
+}

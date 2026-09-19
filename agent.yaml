@@ -1,0 +1,51 @@
+author:
+  email: kgfg00100@gmail.com
+  github: naman-swami
+  name: Naman Swami
+categories:
+- Finance
+description: Algorithmic risk evaluation, portfolio rebalancing, and regulatory compliance
+  audit agent executing quantitative risk calculations and maker-checker validation.
+identity:
+  duties: DUTIES.md
+  explainability: EXPLAINABILITY.md
+  fallback_prompt: AGENTS.md
+  rules: RULES.md
+  soul: SOUL.md
+license: MIT
+model:
+  fallback:
+  - gpt-4o
+  - claude-3-sonnet
+  preferred: llama-3.3-70b-versatile
+name: vault-portfolio-auditor
+runtime:
+  default_framework: openai-sdk
+  exports_directory: exports/
+  supported_frameworks:
+  - openai-sdk
+  - crewai
+  - claude-code
+  - lyzr
+  - langchain
+skills:
+- name: var-risk-calculation
+  path: skills/var-risk-calculation/
+- name: portfolio-rebalancing
+  path: skills/portfolio-rebalancing/
+- name: drawdown-stress-test
+  path: skills/drawdown-stress-test/
+spec_version: 0.1.0
+tags:
+- vault
+- finance
+- opengap
+- portable-agent
+tools:
+- name: compute-sharpe-ratio
+  path: tools/compute-sharpe-ratio.yaml
+- name: check-compliance-limits
+  path: tools/check-compliance-limits.yaml
+- name: simulate-scenario
+  path: tools/simulate-scenario.yaml
+version: 0.1.0
