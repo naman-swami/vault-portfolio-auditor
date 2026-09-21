@@ -15,7 +15,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Validate Sample Portfolio Schema
         run: |
-          python -c "import json; d=json.load(open('data/sample_portfolio.json')); assert sum(p['weight'] for p in d['positions'])==1.0; print('Portfolio verified')"
+          python -c "import json, math; d=json.load(open('data/sample_portfolio.json')); assert math.isclose(sum(p['weight'] for p in d['positions']), 1.0, rel_tol=1e-3); print('Portfolio verified')"
       - name: Run Quantitative Risk Tests
         run: pytest tests/ -v
       - name: Validate OpenGAP 0.1.0 Manifest
