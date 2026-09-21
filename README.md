@@ -55,7 +55,7 @@ vault-portfolio-auditor/
 │   └── risk_methodology.md          # Mathematical formulations
 ├── tests/
 │   └── test_agent.py                # Quantitative validation tests
-├── main.py                          # Portfolio risk CLI
+├── audit.py                          # Portfolio risk CLI
 └── requirements.txt
 ```
 
@@ -66,5 +66,5 @@ vault-portfolio-auditor/
 pytest tests/ -v
 
 # Audit sample $10M portfolio
-python main.py --demo
+python audit.py --demo
 ```
